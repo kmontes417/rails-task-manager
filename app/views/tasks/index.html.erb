@@ -3,8 +3,9 @@
   <p> <%= check_box_tag task.title, "value", task.completed %>
   <%= link_to(task.title, task_path(task)) %> </p>
 
-  <%= link_to "Delete", task_path(task),
+  <%= button_to "Delete", task_path(task),
   method: :delete,
   data: { confirm: "Are you sure?" } %>
 <% end %>
 
+<p> <%= link_to "Add a new task", new_path %> </p>
