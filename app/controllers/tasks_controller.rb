@@ -15,6 +15,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     @task.save
     redirect_to tasks_path
+    # or redirect_to(@article)
   end
   # UPDATE
   def edit
